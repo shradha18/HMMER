@@ -1,0 +1,23 @@
+# HMMER VARIANTS
+
+1. phmmer - single protein sequence against protein sequence database
+
+2.hmmscan-single protein sequence against profile HMM library (Pfam, CATH-gene3DS, PIRSF, SUPERFAMILY, TIGRFAH)
+
+3.hmmsearch-either multiple sequence alignment or profile HMM against protein sequence database
+
+4.jackhmmer-iterative searches. initiated with a single sequence a profile HMM or multiple sequence alignment against a atarget sequence database
+
+#creating HMM database
+
+hmmpress Pfam-A.hmm
+
+#to run hmmscan
+
+hmmscan database.hmm query > results.out
+
+#hmmscan with different parameters
+
+hmmscan --pfamtblout results_pfam.out database_file query_file
+
+hmmscan --cpu 10 --domtblout paja_hmmer.txt ../../hmmer/practice/Pfam-A.hmm Paja1.faa
